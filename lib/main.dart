@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.repositorySearching,
+      initialRoute: AppRoutes.repository,
       getPages: AppPages.pages,
       initialBinding: AllBindings(),
       theme: AppThemes.light,

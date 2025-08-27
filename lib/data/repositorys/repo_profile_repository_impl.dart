@@ -22,7 +22,7 @@ class RepoProfileRepositoryImpl implements RepoProfileRepository {
         content: Text(response.bodyString),
         textCancel: 'Close',
         onCancel: (){
-          Get.offAllNamed(AppRoutes.repositorySearching);
+          Get.offAllNamed(AppRoutes.repository);
         }
       );
     }

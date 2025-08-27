@@ -1,5 +1,5 @@
 abstract class AppRoutes {
-  static const repositorySearching = '/repository-searching';
+  static const repository = '/repository';
   static const repositoryDetail = '/repository-detail';
   static const repositoryProfile = '/repository-profile';
 }

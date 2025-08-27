@@ -8,7 +8,7 @@ import 'package:github_explorer/presentation/modules/repository/repository_detai
 class AppPages {
   static final pages = [
     GetPage(
-      name: AppRoutes.repositorySearching,
+      name: AppRoutes.repository,
       transition: Transition.rightToLeft,
       binding: RepoSearchingBinding(),
       page: () => RepositoryPage()
