@@ -10,7 +10,7 @@ class RepositorySearchingController extends GetxController {
 
   var repoResponse = Rxn<ResponseRepoList>();
   RxList<Items> itemRepo = <Items>[].obs;
-  List<Items> repoFavorite = [];
+  RxList<Items> repoFavorite = <Items>[].obs;
   RxBool loading = true.obs;
   RxBool save = false.obs;
   bool loadMore = true;
@@ -70,7 +70,7 @@ class RepositorySearchingController extends GetxController {
   }
 
   List<Items> getRepositoryFavorite() {
-    repoFavorite = repoSearchingRepository.getRepositoryFavorite();
+    repoFavorite.value = repoSearchingRepository.getRepositoryFavorite();
     return repoFavorite;
   }
 

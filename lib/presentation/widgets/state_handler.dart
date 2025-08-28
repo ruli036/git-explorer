@@ -30,24 +30,30 @@ class StateHandler extends StatelessWidget {
     }
 
     if (isError ?? false) {
-      return errorView ?? Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text("Error"),
-          IconButton(onPressed: onRefresh, icon: Icon(Icons.refresh))
-        ],
+      return errorView ?? SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("Error"),
+            IconButton(onPressed: onRefresh, icon: Icon(Icons.refresh))
+          ],
+        ),
       );
     }
 
     if (isEmpty ?? false) {
-      return emptyView ?? Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text("No Data"),
-          IconButton(onPressed: onRefresh, icon: Icon(Icons.refresh))
-        ],
+      return emptyView ?? SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("No Data"),
+            IconButton(onPressed: onRefresh, icon: Icon(Icons.refresh))
+          ],
+        ),
       );
     }
 
